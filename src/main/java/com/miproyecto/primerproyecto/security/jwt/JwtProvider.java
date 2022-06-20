@@ -49,15 +49,15 @@ public class JwtProvider {
             Jwts.parser().setSigningKey(secret.getBytes()).parseClaimsJws(token);
             return true;
         }catch (MalformedJwtException e){
-            logger.error("token mal formado");
+            logger.error("Formato incorrecto de Token");
         }catch (UnsupportedJwtException e){
-            logger.error("token no soportado");
+            logger.error("Token no soportado");
         }catch (ExpiredJwtException e){
-            logger.error("token expirado");
+            logger.error("Token expirado");
         }catch (IllegalArgumentException e){
-            logger.error("token vacío");
+            logger.error("Token vacío");
         }catch (SignatureException e){
-            logger.error("fail en la firma");
+            logger.error("Error en la firma");
         }
         return false;
     }
