@@ -48,7 +48,7 @@ public class ControllerPersona {
         persoServ.crearPersona(pers);
     }
     
-//    Del video de Camacho
+
     
     
 //    @GetMapping("persona/ver/{id}")
@@ -56,6 +56,7 @@ public class ControllerPersona {
 //        return persoServ.buscarPersona(id);
 //    }
     
+    //VER CÓMO IMPLEMENTAR MÉTODO: Por el momento no lo voy a utilizar
     @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping ("persona/delete/{id}")
     public void borrarPersona(@PathVariable Long id){
@@ -98,26 +99,3 @@ public class ControllerPersona {
 
 }
     
-    
-
-/*
-    PRUEBAS CON USUARIO DTO --- REVISAR
-    
-    @GetMapping ("/user/portfolio")
-    @ResponseBody
-    public UsuarioDTO usuarioCompleto(@PathVariable Long id){
-    
-        User user = new User();
-        Persona persona = new Persona();
-        RedesSociales redes = new RedesSociales();
-        Experiencia experiencia = new Experiencia();
-        HardSkills hardskills = new HardSkills();
-        SoftSkills softskills = new SoftSkills();
-        Proyectos proyectos = new Proyectos();
-        
-        UsuarioDTO usuarioCom = new UsuarioDTO();
-        
-        
-        
-    }
-    */
